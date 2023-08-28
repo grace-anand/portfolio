@@ -11,5 +11,9 @@
   &__text {
     color: white;
     font-size: 5em;
+    
+    span {
+      opacity: 0.1;
+    }
   }
 }

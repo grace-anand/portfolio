@@ -6,7 +6,6 @@ import "./about-me.scss"
 const AboutMe = () => {
   const aboutMe = `
       I am a full-stack web developer with a passion for learning and creating.
-      I have a background in the arts and education, and I am excited to bring 
       my creativity and problem-solving skills to the world of web development.
       I am a team player who is always looking for ways to improve my skills and help others.
       I am currently looking for a full-time position as a web developer.
@@ -14,10 +13,10 @@ const AboutMe = () => {
   const [lettersRef, setLettersRef] = useArrayref()
   
   function useArrayref() {
-    const lettersRef = useRef<HTMLSpanElement[]>([])
+    const lettersRef = useRef<HTMLSpanElement[]|null>(null)
     lettersRef.current = []
     const setLettersRef = (ref: HTMLSpanElement) => {
-      ref && lettersRef.current.push(ref)
+      ref && lettersRef.current?.push(ref)
     }
     return [lettersRef, setLettersRef]
   }
@@ -28,6 +27,7 @@ const AboutMe = () => {
   
   useEffect(() => {
     const reveal = gsap.to(
+      // @ts-ignore
       lettersRef?.current,
       {
         scrollTrigger: {
@@ -36,8 +36,7 @@ const AboutMe = () => {
           end: "bottom 80%",
           scrub: true,
         },
-        color: "green",
-        duration: 5,
+        opacity: 1,
         stagger: 1,
       }
     )
@@ -45,7 +44,6 @@ const AboutMe = () => {
       reveal.kill()
     }
   }, [lettersRef])
-  
 
   return (
     <section className="about-me">
@@ -54,7 +52,8 @@ const AboutMe = () => {
         <p className="about-me__text" ref={triggerRef}>
           {
             aboutMe.split("").map((letter, index) => {
-              return <span key={index} className="about-me__text-letter" ref={setLettersRef}>{letter}</span>
+              // @ts-ignore
+              return <span key={index} ref={setLettersRef}>{letter}</span>
             })
           }
         </p>
