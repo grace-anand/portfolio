@@ -1,21 +1,27 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
 
 type Props = {
-  active?: boolean;
   children: React.ReactNode;
   href: string;
   className?: string;
 };
 
 const NavItem = (props: Props) => {
+  const router = useRouter();
+
   return (
     <Link
       href={props.href}
-      className={cn("underline-offset-1 decoration-wavy", props.className, {
-        underline: props.active,
-      })}
+      className={cn(
+        "mr-4 rounded relative group",
+        props.className,
+        {
+          "squiggly-line": router.asPath === props.href,
+        },
+        router.asPath === props.href ? "font-bold" : "font-medium"
+      )}
     >
       {props.children}
     </Link>
