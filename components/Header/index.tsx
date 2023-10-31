@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import NavItem from "./NavItem";
 import { Icons } from "../Icons";
 import { motion } from "framer-motion";
@@ -25,12 +24,12 @@ const Header = () => {
           className="hover:opacity-80"
         />
       </IconLink>
-      <nav className="flex gap-2">
-        <IconLink href="#" target="_blank">
-          <Icons.lindedIn className="w-8" />
-        </IconLink>
+      <nav className="flex gap-5">
         <IconLink href="#" target="_blank">
           <Icons.github className="w-8" />
+        </IconLink>
+        <IconLink href="#" target="_blank">
+          <Icons.lindedIn className="w-8" />
         </IconLink>
         <IconLink href="#" target="_blank">
           <Icons.x className="w-8" />
@@ -38,6 +37,7 @@ const Header = () => {
         <IconLink href="#" target="_blank">
           <Icons.instagram className="w-8" />
         </IconLink>
+        <Icons.moon className="w-8" />
       </nav>
     </header>
   );
