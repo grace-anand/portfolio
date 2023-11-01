@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="favicons/site.webmanifest" />
       </Head>
       <Header />
-      <main className={`${montserrat.variable} font-mont`}>
+      <main className={`${montserrat.variable} font-mont container`}>
         <Component {...pageProps} />
       </main>
     </>

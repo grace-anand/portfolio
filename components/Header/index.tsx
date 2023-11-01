@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light lg:px-16 relative z-1 md:px-12 sm:px-8 ">
+    <header className="w-full flex items-center justify-between px-32 py-4 font-medium z-10 lg:px-16 relative z-1 md:px-12 sm:px-8 ">
       <nav className="gap-5 flex">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
@@ -21,23 +21,26 @@ const Header = () => {
           alt="logo"
           width={64}
           height={64}
-          className="hover:opacity-80"
+          className="hover:opacity-80 hover:shadow-md"
         />
       </IconLink>
-      <nav className="flex gap-5">
-        <IconLink href="#" target="_blank">
-          <Icons.github className="w-8" />
+      <nav className="flex gap-8">
+        <IconLink href="https://github.com/grace-anand" target="_blank">
+          <Icons.github className="w-6" />
         </IconLink>
-        <IconLink href="#" target="_blank">
-          <Icons.lindedIn className="w-8" />
+        <IconLink
+          href="https://www.linkedin.com/in/anand-r-67b18925a"
+          target="_blank"
+        >
+          <Icons.lindedIn className="w-6" />
         </IconLink>
-        <IconLink href="#" target="_blank">
-          <Icons.x className="w-8" />
+        <IconLink href="https://twitter.com/graceanand99" target="_blank">
+          <Icons.x className="w-6" />
         </IconLink>
-        <IconLink href="#" target="_blank">
-          <Icons.instagram className="w-8" />
+        <IconLink href="https://instagram.com/an_and__r" target="_blank">
+          <Icons.instagram className="w-6" />
         </IconLink>
-        <Icons.moon className="w-8" />
+        <Icons.moon className="w-6" />
       </nav>
     </header>
   );
