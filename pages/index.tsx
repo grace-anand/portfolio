@@ -12,7 +12,8 @@ export default function Home() {
       </div>
       <div className="w-1/2 pl-5">
         <AnimatedHeading className="text-6xl text-left">
-          Hello, I&apos;m Anand R 👋. A passionate web developer.
+          Hello, I&apos;m Anand 👋. A passionate web dev who is keen on learning
+          new tech.
         </AnimatedHeading>
         <p className="my-4 font-medium">
           I am a web developer with a passion for building web applications. I
@@ -25,17 +26,12 @@ export default function Home() {
             capitalize text-primary-foreground hover:border-primary hover:bg-transparent hover:text-primary
             md:p-2 md:px-4 md:text-base hide-squiggly-line"
             target="_blank"
-            download={true}
+            download
           >
             Download CV <Icons.externalLink className="inline-block ms-1" />
           </Link>
-          <Link
-            href="/#contact"
-            className="m-4 text-lg font-medium capitalize text-secondary-foreground rounded-lg border-2 border-solid bg-secondary p-2.5 px-6 
-            hover:border-secondary hover:bg-slate-500 hover:text-secondary
-            md:p-2 md:px-4 md:text-base hide-squiggly-line"
-          >
-            Contact Me
+          <Link href="/#contact" className="ms-5 underline">
+            Contact
           </Link>
         </div>
       </div>

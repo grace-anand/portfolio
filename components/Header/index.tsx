@@ -21,7 +21,7 @@ const Header = () => {
           alt="logo"
           width={64}
           height={64}
-          className="hover:opacity-80 hover:shadow-md"
+          className="hover:opacity-80"
         />
       </IconLink>
       <nav className="flex gap-8">
