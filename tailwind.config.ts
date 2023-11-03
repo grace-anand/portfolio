@@ -16,12 +16,16 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
-    animation: {
-      "spin-slow": "spin 8s linear infinite",
-    },
     extend: {
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
+      },
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
+      },
+      backgroundImage: {
+        circular:
+          "repeating-radial-gradient(hsl(var(--primary)) 2px,hsl(var(--background)) 5px,hsl(var(--background)) 100px)",
       },
       colors: {
         background: "hsl(var(--background))",

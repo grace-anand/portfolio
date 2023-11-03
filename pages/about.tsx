@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import profilePic from "../public/my-pic.png";
 import { useInView, useSpring } from "framer-motion";
+import Skills from "@/components/Skills";
 
 const About = () => {
   return (
@@ -47,6 +48,7 @@ const About = () => {
             <Highlights digit={2} description="Years of Experience" />
           </div>
         </div>
+        <Skills />
       </section>
     </>
   );
