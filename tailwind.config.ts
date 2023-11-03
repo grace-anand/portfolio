@@ -16,6 +16,9 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
+    animation: {
+      "spin-slow": "spin 8s linear infinite",
+    },
     extend: {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -34,9 +35,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="favicons/site.webmanifest" />
       </Head>
       <Header />
-      <main className={`${montserrat.variable} font-mont container`}>
+      <main className={`${montserrat.variable} font-mont min-h-screen`}>
         <Component {...pageProps} />
       </main>
+      <Footer />
     </>
   );
 }

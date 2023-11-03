@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NavItem from "./NavItem";
-import { Icons } from "../Icons";
+import Icons from "../Icons";
 import { motion } from "framer-motion";
 
 const Header = () => {
