@@ -363,7 +363,6 @@ const Icons = {
         strokeWidth={2}
       >
         <path d="M7 6a10.994 10.994 0 0 0 12.56 10.89C17.95 19.36 15.17 21 12 21a9 9 0 0 1-9-9c0-3.17 1.64-5.95 4.11-7.56C7.04 4.95 7 5.47 7 6Z" />
-        <set attributeName="opacity" begin="0.6s" to={0} />
       </g>
       <mask id="a">
         <circle cx={12} cy={12} r={12} fill="#fff" />
