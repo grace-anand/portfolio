@@ -73,10 +73,18 @@
     background-position: 10% 100%;
   }
 
+  .dark .squiggly-line {
+    background-image: url(/squiggly-line-dark.svg);
+  }
+
+  .dark a:hover {
+    background-image: url(/squiggly-line-dark.svg);
+  }
+
   .hide-squiggly-line {
-    background-image: none;
+    background-image: none !important;
   }
   .hide-squiggly-line:hover {
-    background-image: none;
+    background-image: none !important;
   }
 }

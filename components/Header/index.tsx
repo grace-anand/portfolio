@@ -2,6 +2,7 @@ import Image from "next/image";
 import NavItem from "./NavItem";
 import Icons from "../Icons";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -40,7 +41,7 @@ const Header = () => {
         <IconLink href="https://instagram.com/an_and__r" target="_blank">
           <Icons.instagram className="w-6" />
         </IconLink>
-        <Icons.moon className="w-6" />
+        <ThemeToggle />
       </nav>
     </header>
   );
