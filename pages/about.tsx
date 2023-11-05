@@ -6,6 +6,7 @@ import profilePic from "../public/my-pic.png";
 import { useInView, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const About = () => {
   return (
@@ -50,6 +51,7 @@ const About = () => {
         </div>
         <Skills />
         <Experience />
+        <Education />
       </section>
     </>
   );

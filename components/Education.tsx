@@ -4,19 +4,19 @@ import { useRef } from "react";
 import BulletIcon from "./BulletIcon";
 
 const Details = ({
-  position,
-  company,
-  link,
+  type,
   period,
-  address,
-  work,
+  place,
+  info,
+  institution,
+  link,
 }: {
-  position: string;
-  company: string;
-  link: string;
+  type: string;
   period: string;
-  address: string;
-  work: string;
+  place: string;
+  info: string;
+  institution: string;
+  link: string;
 }) => {
   const ref = useRef<HTMLLIElement>(null);
 
@@ -32,21 +32,21 @@ const Details = ({
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold sm:text-2xl xs:text-xl text-lg">
-          {position}&nbsp;
+          {type}&nbsp;
           <a className="capitalize text-primary" href={link} target="_blank">
-            @{company}
+            @{institution}
           </a>
         </h3>
         <span className="capitalize opacity-70 font-medium text-sm sm:text-base">
-          {period} | {address}
+          {period} | {place}
         </span>
-        <p className="font-medium w-full text-sm md:text-base">{work}</p>
+        <p className="font-medium w-full text-sm md:text-base">{info}</p>
       </motion.div>
     </li>
   );
 };
 
-const Experience = () => {
+const Education = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -56,16 +56,16 @@ const Experience = () => {
   return (
     <>
       <h2 className="font-bold text-8xl mt-20 w-full text-center py-10">
-        Experience
+        Education
       </h2>
-      <div className="w-3/4 mx-auto relative" ref={ref}>
+      <div className="w-3/4 mx-auto relative mb-[50vh]" ref={ref}>
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-1 w-1 h-full bg-primary origin-top"
         />
         <ul>
-          {experiences.map((experience, i) => (
-            <Details key={experience.company + i} {...experience} />
+          {allEducation.map((education, i) => (
+            <Details key={education.institution + i} {...education} />
           ))}
         </ul>
       </div>
@@ -73,15 +73,31 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;
 
-const experiences = [
+const allEducation = [
   {
-    position: "Solution architect",
-    company: "Francium tech",
-    link: "/",
-    period: "2021 - Present",
-    address: "Padur, Chennai",
-    work: "Worked mostly as Front End Engineer, Gained immense knowledge on working with large scale applications, (Money Smart) Was able to work on multiple Repos, (Libraries, CMS, API, etc) and had opportunity to fix several bugs and develop debugging skills.",
+    type: "Bachelor of Science",
+    period: "2018 - 2021",
+    place: "Sholinganallur, Chennai",
+    info: "Graduated in B.sc. Electronics and commmunication with 7.7 CGPA. ",
+    institution: "MSCAS",
+    link: "https://www.mscartsandscience-edu.in/",
+  },
+  {
+    type: "Higher Secondary",
+    period: "2016 - 2018",
+    place: "Velachery, Chennai",
+    info: "Completed Higher Secondary with 65%.",
+    institution: "St. Britto's Matriculation Higher Secondary School",
+    link: "https://stbrittosmhss.edu.in/",
+  },
+  {
+    type: "High School",
+    period: "2015 - 2016",
+    place: "Velachery, Chennai",
+    info: "Completed High School with 86%.",
+    institution: "St. Britto's Matriculation Higher Secondary School",
+    link: "https://stbrittosmhss.edu.in/",
   },
 ];
