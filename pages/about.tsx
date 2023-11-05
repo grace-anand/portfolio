@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import profilePic from "../public/my-pic.png";
 import { useInView, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 const About = () => {
   return (
@@ -31,11 +32,10 @@ const About = () => {
               these things in mind.
             </p>
             <p className="font-medium">
-              Whether I&apos;m working on a website, mobile app, or other
-              digital product, I bring my commitment to design excellence and
-              user-centered thinking to every project I work on. I look forward
-              to the opportunity to bring my skills and passion to your next
-              project.
+              Whether I&apos;m working on a web app, mobile app, or a hybrid
+              app, I always strive to build scalable products. I am always
+              looking for opportunities to work with passionate people and
+              exciting products.
             </p>
           </div>
           <div className="col-span-8 relative rounded-2xl p-8 border-2 border-primary bg-background h-fit lg:col-span-4 xl:col-span-3">
@@ -49,6 +49,7 @@ const About = () => {
           </div>
         </div>
         <Skills />
+        <Experience />
       </section>
     </>
   );

@@ -11,7 +11,7 @@ const Header = () => {
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/blog">Blog</NavItem>
+        <NavItem href="https://anandr.vercel.app/">Blog</NavItem>
       </nav>
       <IconLink
         href="/"
