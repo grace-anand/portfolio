@@ -4,10 +4,15 @@ import AnimatedHeading from "@/components/AnimatedHeading";
 import Link from "next/link";
 import Icons from "@/components/Icons";
 import HireMe from "@/components/HireMe";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="Grace Anand's Home Page" />
+      </Head>
       <section className="flex items-center justify-between w-full pb-5">
         <div className="w-1/2">
           <Image
