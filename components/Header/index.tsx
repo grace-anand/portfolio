@@ -15,7 +15,7 @@ const Header = () => {
       </nav>
       <IconLink
         href="/"
-        className="absolute left-[50%] top-2 translate-x-[-50%] hide-squiggly-line"
+        className="absolute left-[50%] top-2 translate-x-[-50%] hover:bg-none dark:hover:bg-none"
       >
         <Image
           src="/logo.png"
@@ -51,7 +51,7 @@ const IconLink = (props: React.ComponentProps<typeof motion.a>) => {
   return (
     <motion.a
       {...props}
-      className="hide-squiggly-line"
+      className="hover:bg-none dark:hover:bg-none"
       whileHover={{ y: -2 }}
       whileTap={{ y: -2 }}
     >

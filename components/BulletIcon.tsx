@@ -10,7 +10,7 @@ const BulletIcon = ({ reference }: { reference: RefObject<HTMLLIElement> }) => {
   return (
     <figure className="absolute -left-0">
       <svg
-        className="-rotate-90 xs:w-[60px] xs:h-[60px] w-[40px] h-[40px] md:w-full md:h-full"
+        className="-rotate-90 sm:w-[60px] sm:h-[60px] w-[40px] h-[40px] md:w-full md:h-full"
         width="75"
         height="75"
         viewBox="0 0 100 100"

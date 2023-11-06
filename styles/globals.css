@@ -64,6 +64,7 @@
     animation-timing-function: linear;
   }
 
+  /* Add bg-none from tailwind to remove the squiggly line */
   .squiggly-line {
     padding-bottom: 0.1em;
     background-position: 0% 100%;
@@ -79,12 +80,5 @@
 
   .dark a:hover {
     background-image: url(/squiggly-line-dark.svg);
-  }
-
-  .hide-squiggly-line {
-    background-image: none !important;
-  }
-  .hide-squiggly-line:hover {
-    background-image: none !important;
   }
 }

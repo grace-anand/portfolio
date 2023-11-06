@@ -66,13 +66,13 @@ type Props = {
 
 const Highlights = ({ digit, description }: Props) => (
   <div className="flex flex-col xl:items-end justify-center items-center">
-    <span className="inline-block md:text-7xl font-bold sm:text-6xl xs:text-5xl text-4xl">
+    <span className="inline-block lg:text-7xl font-bold md:text-6xl sm:text-5xl text-4xl">
       <span>
         <AnimatedNumbers digit={digit} />
       </span>
       +
     </span>
-    <h2 className="mb-4 xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75  md:text-center sm:text-lg xs:text-base text-sm">
+    <h2 className="mb-4 xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75  md:text-center md:text-lg sm:text-base text-sm">
       {description}
     </h2>
   </div>

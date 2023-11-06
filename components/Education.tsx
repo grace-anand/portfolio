@@ -31,7 +31,7 @@ const Details = ({
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold sm:text-2xl xs:text-xl text-lg">
+        <h3 className="capitalize font-bold md:text-2xl sm:text-xl text-lg">
           {type}&nbsp;
           <a className="capitalize text-primary" href={link} target="_blank">
             @{institution}

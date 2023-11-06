@@ -31,7 +31,7 @@ export default function Home() {
               href="/anand-r-resume.pdf"
               className="flex items-center rounded-lg border-2 border-solid bg-primary p-2.5 px-6 text-lg font-semibold
             capitalize text-primary-foreground hover:border-primary hover:bg-transparent hover:text-primary
-            md:p-2 md:px-4 md:text-base hide-squiggly-line"
+            md:p-2 md:px-4 md:text-base hover:bg-none dark:hover:bg-none"
               target="_blank"
               download
             >
