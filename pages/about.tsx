@@ -41,7 +41,13 @@ const About = () => {
           </div>
           <div className="col-span-8 relative rounded-2xl p-8 border-2 border-primary bg-background h-fit lg:col-span-4 xl:col-span-3">
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-primary" />
-            <Image src={profilePic} alt="Grace Anand" className="rounded-2xl" />
+            <Image
+              src={profilePic}
+              alt="Grace Anand"
+              className="rounded-2xl"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
           </div>
           <div className="xl:col-span-2 flex xl:flex-col xl:items-end justify-between col-span-8 flex-row  items-center order-3 md:order-none">
             <Highlights digit={10} description="Projects Completed" />

@@ -189,7 +189,7 @@ const Icons = {
         stroke-linejoin="round"
         stroke-width="2"
       >
-        <g stroke-dasharray="2">
+        <g strokeDasharray="2">
           <path d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
             <animate
               fill="freeze"
@@ -368,7 +368,7 @@ const Icons = {
       <g
         fill="none"
         stroke="currentColor"
-        stroke-dasharray="2"
+        strokeDasharray="2"
         stroke-dashoffset="2"
         stroke-linecap="round"
         stroke-width="2"

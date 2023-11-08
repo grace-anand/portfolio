@@ -34,6 +34,8 @@ const FeaturedProject = ({
           src={image}
           alt={title}
           className="hover:scale-110 transform transition-all duration-300 ease-in-out"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
         />
       </Link>
       <div className="flex lg:w-1/2 flex-col items-start justify-between lg:pl-6 w-full pl-0 pt-6 lg:pt-0">

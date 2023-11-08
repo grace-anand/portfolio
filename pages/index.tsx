@@ -18,8 +18,9 @@ export default function Home() {
           <Image
             src={profilePic}
             alt="grace-anand"
-            width={700}
             className="mx-auto"
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
           />
         </div>
         <div className="w-1/2 pl-5">
