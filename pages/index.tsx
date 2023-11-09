@@ -13,7 +13,7 @@ export default function Home() {
         <title>Home</title>
         <meta name="description" content="Grace Anand's Home Page" />
       </Head>
-      <section className="flex items-center justify-between w-full">
+      <section className="flex flex-col md:flex-row items-center justify-between w-full mb-5">
         <div className="w-1/2">
           <Image
             src={profilePic}
@@ -23,16 +23,16 @@ export default function Home() {
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
           />
         </div>
-        <div className="w-1/2 pl-5">
-          <AnimatedHeading className="text-6xl text-left">
+        <div className="md:w-1/2 md:pl-5 pt-5 w-full">
+          <AnimatedHeading className="xl:text-6xl md:text-left lg:text-5xl sm:text-4xl text-3xl text-center">
             Hello, I&apos;m Anand 👋. A passionate web dev who is keen on
             learning new tech.
           </AnimatedHeading>
-          <p className="my-4 font-medium">
+          <p className="my-4 font-medium md:text-left text-center">
             I am a web developer with a passion for building web applications. I
             enjoy learning new technologies and building projects with them.
           </p>
-          <div className="flex items-center self-start mt-2">
+          <div className="flex items-center justify-center md:justify-normal md:self-start mt-2">
             <Link
               href="/anand-r-resume.pdf"
               className="flex items-center rounded-lg border-2 border-solid bg-primary p-2.5 px-6 text-lg font-semibold
@@ -41,7 +41,7 @@ export default function Home() {
               target="_blank"
               download
             >
-              Resume{" "}
+              Resume
               <Icons.externalLink className="inline-block ms-1" width={20} />
             </Link>
             <Link href="/#contact" className="ms-5 underline">

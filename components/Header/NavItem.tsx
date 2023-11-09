@@ -1,14 +1,13 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
 type Props = {
   children: React.ReactNode;
-  href: string;
   className?: string;
-};
+} & LinkProps;
 
-const NavItem = (props: Props) => {
+export const NavItem = (props: Props) => {
   const router = useRouter();
 
   return (
@@ -28,4 +27,22 @@ const NavItem = (props: Props) => {
   );
 };
 
-export default NavItem;
+export const MobileNavItem = (props: Props) => {
+  const router = useRouter();
+
+  return (
+    <Link
+      {...props}
+      className={cn(
+        "w-min mx-auto my-2",
+        props.className,
+        {
+          "squiggly-line": router.asPath === props.href,
+        },
+        router.asPath === props.href ? "font-bold" : "font-medium"
+      )}
+    >
+      {props.children}
+    </Link>
+  );
+};
