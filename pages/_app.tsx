@@ -36,7 +36,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="favicons/site.webmanifest" />
       </Head>
       <Header />
-      <main className={`${montserrat.variable} font-mont min-h-screen`}>
+      <main
+        className={`${montserrat.variable} font-mont min-h-[calc(100vh-10rem)] grid place-items-center container`}
+      >
         <Component {...pageProps} />
       </main>
       <Footer />

@@ -13,12 +13,12 @@ export default function Home() {
         <title>Home</title>
         <meta name="description" content="Grace Anand's Home Page" />
       </Head>
-      <section className="flex items-center justify-between w-full pb-5">
+      <section className="flex items-center justify-between w-full">
         <div className="w-1/2">
           <Image
             src={profilePic}
             alt="grace-anand"
-            className="mx-auto"
+            className="mx-auto dark:brightness-75"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
           />

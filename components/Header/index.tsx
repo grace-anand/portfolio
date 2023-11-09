@@ -16,6 +16,7 @@ const Header = () => {
       <IconLink
         href="/"
         className="absolute left-[50%] top-2 translate-x-[-50%] hover:bg-none dark:hover:bg-none"
+        type="Home"
       >
         <Image
           src="/logo.png"
@@ -26,19 +27,32 @@ const Header = () => {
         />
       </IconLink>
       <nav className="flex gap-8">
-        <IconLink href="https://github.com/grace-anand" target="_blank">
+        <IconLink
+          href="https://github.com/grace-anand"
+          target="_blank"
+          type="Github"
+        >
           <Icons.github className="w-6" />
         </IconLink>
         <IconLink
           href="https://www.linkedin.com/in/anand-r-67b18925a"
           target="_blank"
+          type="LinkedIn"
         >
           <Icons.lindedIn className="w-6" />
         </IconLink>
-        <IconLink href="https://twitter.com/graceanand99" target="_blank">
+        <IconLink
+          href="https://twitter.com/graceanand99"
+          target="_blank"
+          type="Twitter"
+        >
           <Icons.x className="w-6" />
         </IconLink>
-        <IconLink href="https://instagram.com/an_and__r" target="_blank">
+        <IconLink
+          href="https://instagram.com/an_and__r"
+          target="_blank"
+          type="Instagram"
+        >
           <Icons.instagram className="w-6" />
         </IconLink>
         <ThemeToggle />
@@ -47,13 +61,16 @@ const Header = () => {
   );
 };
 
-const IconLink = (props: React.ComponentProps<typeof motion.a>) => {
+const IconLink = (
+  props: React.ComponentProps<typeof motion.a> & { type: string }
+) => {
   return (
     <motion.a
       {...props}
       className="hover:bg-none dark:hover:bg-none"
       whileHover={{ y: -2 }}
       whileTap={{ y: -2 }}
+      aria-label={"Visit my" + props.type}
     >
       {props.children}
     </motion.a>

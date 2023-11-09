@@ -156,29 +156,27 @@ const Projects = () => {
         <title>Projects</title>
         <meta name="description" content="Projects by Grace Anand" />
       </Head>
-      <section className="px-8 md:px-20">
-        <AnimatedHeading className="mb-16">Projects</AnimatedHeading>
-        <div className="grid grid-cols-12 xl:gap-24 md:gap-y-32 lg:gap-x-16 sm:gap-x-8 gap-y-24 gap-x-0 mb-10">
-          <div className="col-span-12">
-            <FeaturedProject {...allProjects[0]} />
-          </div>
-          <div className="col-span-6">
-            <Project {...allProjects[0]} />
-          </div>
-          <div className="col-span-6">
-            <Project {...allProjects[0]} />
-          </div>
-          <div className="col-span-12">
-            <FeaturedProject {...allProjects[0]} />
-          </div>
-          <div className="col-span-6">
-            <Project {...allProjects[0]} />
-          </div>
-          <div className="col-span-6">
-            <Project {...allProjects[0]} />
-          </div>
+      <AnimatedHeading className="mb-16">Projects</AnimatedHeading>
+      <div className="grid grid-cols-12 xl:gap-24 md:gap-y-32 lg:gap-x-16 sm:gap-x-8 gap-y-24 gap-x-0 mb-10">
+        <div className="col-span-12">
+          <FeaturedProject {...allProjects[0]} />
         </div>
-      </section>
+        <div className="col-span-6">
+          <Project {...allProjects[0]} />
+        </div>
+        <div className="col-span-6">
+          <Project {...allProjects[0]} />
+        </div>
+        <div className="col-span-12">
+          <FeaturedProject {...allProjects[0]} />
+        </div>
+        <div className="col-span-6">
+          <Project {...allProjects[0]} />
+        </div>
+        <div className="col-span-6">
+          <Project {...allProjects[0]} />
+        </div>
+      </div>
     </>
   );
 };
