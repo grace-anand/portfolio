@@ -35,7 +35,7 @@ export default function Home() {
           <div className="flex items-center justify-center md:justify-normal md:self-start mt-2">
             <Link
               href="/anand-r-resume.pdf"
-              className="flex items-center rounded-lg border-2 border-solid bg-primary p-2.5 px-6 text-lg font-semibold
+              className="flex items-center rounded-lg border-2 border-solid bg-primary py-2 px-4 md:py-2.5 lg:px-6 text-lg font-semibold
             capitalize text-primary-foreground hover:border-primary hover:bg-transparent hover:text-primary
             md:p-2 md:px-4 md:text-base hover:bg-none dark:hover:bg-none"
               target="_blank"
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <HireMe />
+      <HireMe className="fixed bottom-4 left-4 hidden md:block" />
     </>
   );
 }
