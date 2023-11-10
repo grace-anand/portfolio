@@ -36,13 +36,10 @@ const wordVariant = {
 
 const AnimatedHeading = (props: Props) => {
   return (
-    <div
-      className="w-full mx-auto py-2 flex items-center justify-center text-center
-                    overflow-hidden"
-    >
+    <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden">
       <motion.h1
         className={cn(
-          "inline-block w-ful font-bold capitalize text-8xl",
+          "inline-block w-ful font-bold capitalize mb-5 text-4xl sm:text-5xl md:text-6xl lg:text-8xl lg:mb-10",
           props.className
         )}
         variants={quote}

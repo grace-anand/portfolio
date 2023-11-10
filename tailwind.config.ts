@@ -25,6 +25,12 @@ const config: Config = {
       },
       backgroundImage: {
         circular:
+          "repeating-radial-gradient(hsl(var(--primary)) 2px,hsl(var(--background)) 5px,hsl(var(--background)) 40px)",
+        "circular-sm":
+          "repeating-radial-gradient(hsl(var(--primary)) 2px,hsl(var(--background)) 5px,hsl(var(--background)) 60px)",
+        "circular-md":
+          "repeating-radial-gradient(hsl(var(--primary)) 2px,hsl(var(--background)) 5px,hsl(var(--background)) 80px)",
+        "circular-lg":
           "repeating-radial-gradient(hsl(var(--primary)) 2px,hsl(var(--background)) 5px,hsl(var(--background)) 100px)",
       },
       colors: {

@@ -2,6 +2,7 @@ import { useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import BulletIcon from "./BulletIcon";
+import AnimatedHeading from "./AnimatedHeading";
 
 const Details = ({
   type,
@@ -55,9 +56,7 @@ const Education = () => {
 
   return (
     <>
-      <h2 className="font-bold text-8xl mt-20 w-full text-center py-10">
-        Education
-      </h2>
+      <AnimatedHeading className="pt-10">Education</AnimatedHeading>
       <div className="w-3/4 mx-auto relative mb-[50vh]" ref={ref}>
         <motion.div
           style={{ scaleY: scrollYProgress }}
