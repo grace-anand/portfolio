@@ -57,12 +57,15 @@ const Education = () => {
   return (
     <>
       <AnimatedHeading className="pt-10">Education</AnimatedHeading>
-      <div className="w-3/4 mx-auto relative mb-[50vh]" ref={ref}>
+      <div
+        className="w-full md:w-[90%] lg:w-3/4 mx-auto relative mb-[50vh]"
+        ref={ref}
+      >
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-1 w-1 h-full bg-primary origin-top"
+          className="absolute left-[19px] sm:left-7 md:left-9 top-1 sm:w-1 w-[2px] h-full bg-primary origin-top"
         />
-        <ul>
+        <ul className="w-full sm:ml-4 ml-2">
           {allEducation.map((education, i) => (
             <Details key={education.institution + i} {...education} />
           ))}
@@ -87,7 +90,7 @@ const allEducation = [
     type: "Higher Secondary",
     period: "2016 - 2018",
     place: "Velachery, Chennai",
-    info: "Completed Higher Secondary with 65%.",
+    info: "Completed Higher Secondary with a total percentage of 65%.",
     institution: "St. Britto's Matriculation Higher Secondary School",
     link: "https://stbrittosmhss.edu.in/",
   },
@@ -95,7 +98,7 @@ const allEducation = [
     type: "High School",
     period: "2015 - 2016",
     place: "Velachery, Chennai",
-    info: "Completed High School with 86%.",
+    info: "Completed High School with a total percentage of 86%.",
     institution: "St. Britto's Matriculation Higher Secondary School",
     link: "https://stbrittosmhss.edu.in/",
   },

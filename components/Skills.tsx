@@ -15,7 +15,7 @@ const Skill = ({
 }) => {
   return (
     <motion.a
-      className="flex items-center sm:rounded-full font-bold sm:font-semibold sm:bg-primary sm:text-primary-foreground justify-center lg:px-6 lg:py-3 sm:px-4 sm:py-2 p-0 cursor-pointer absolute dark:hover:bg-none"
+      className="flex items-center sm:rounded-full font-bold sm:font-semibold sm:bg-primary sm:text-primary-foreground justify-center lg:px-6 lg:py-3 sm:px-4 sm:py-2 p-0 cursor-pointer absolute dark:hover:bg-none text-primary dark:text-foreground"
       whileHover={{ scale: 1.1 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}
@@ -32,7 +32,7 @@ const Skills = () => {
   return (
     <>
       <AnimatedHeading>Skills</AnimatedHeading>
-      <div className="w-full relative flex items-center justify-center rounded-full text-primary-foreground h-[50vh] sm:h-[60vh] lg:h-[80vh] bg-circular sm:bg-circular-sm md:bg-circular-md lg:bg-circular-lg ">
+      <div className="w-full relative flex items-center justify-center rounded-full text-primary-foreground h-[80vh] bg-circular sm:bg-circular-sm md:bg-circular-md lg:bg-circular-lg ">
         <motion.div
           className="flex items-center rounded-full font-semibold bg-primary justify-center md:w-20 md:h-20 cursor-pointer w-12 h-12"
           whileHover={{ scale: 1.1 }}

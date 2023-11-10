@@ -57,12 +57,12 @@ const Experience = () => {
   return (
     <>
       <AnimatedHeading className="pt-10">Experience</AnimatedHeading>
-      <div className="w-3/4 mx-auto relative" ref={ref}>
+      <div className="w-full md:w-[90%] lg:w-3/4 mx-auto relative" ref={ref}>
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-1 w-1 h-full bg-primary origin-top"
+          className="absolute left-[19px] sm:left-7 md:left-9 top-1 sm:w-1 w-[2px] h-full bg-primary origin-top"
         />
-        <ul>
+        <ul className="w-full sm:ml-4 ml-2">
           {experiences.map((experience, i) => (
             <Details key={experience.company + i} {...experience} />
           ))}
