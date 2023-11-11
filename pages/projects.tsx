@@ -6,6 +6,7 @@ import React from "react";
 import profilePic from "../public/my-pic.png";
 import Icons from "@/components/Icons";
 import { motion } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FeaturedProject = ({
   type,
@@ -156,8 +157,9 @@ const Projects = () => {
         <title>Projects</title>
         <meta name="description" content="Projects by Grace Anand" />
       </Head>
+      <TransitionEffect />
       <AnimatedHeading>Projects</AnimatedHeading>
-      <div className="grid grid-cols-12 xl:gap-24 md:gap-y-32 lg:gap-x-16 sm:gap-x-8 gap-y-24 gap-x-0 mb-10">
+      <div className="grid grid-cols-12 xl:gap-24 md:gap-y-32 lg:gap-x-16 sm:gap-x-8 gap-y-8 gap-x-0 mb-10">
         <div className="col-span-12">
           <FeaturedProject {...allProjects[0]} />
         </div>

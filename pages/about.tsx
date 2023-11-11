@@ -6,6 +6,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Highlights from "@/components/Highlights";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
         <title>About</title>
         <meta name="description" content="About Grace Anand" />
       </Head>
+      <TransitionEffect />
       <AnimatedHeading>A little about me</AnimatedHeading>
       <section className="grid grid-cols-8 md:gap-16">
         <div className="items-start justify-start lg:col-span-4 col-span-8">

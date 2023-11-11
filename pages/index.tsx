@@ -5,6 +5,7 @@ import Link from "next/link";
 import Icons from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import Head from "next/head";
+import TransitionEffect from "@/components/TransitionEffect";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <title>Home</title>
         <meta name="description" content="Grace Anand's Home Page" />
       </Head>
+      <TransitionEffect />
       <section className="flex flex-col md:flex-row items-center justify-between w-full mb-5">
         <div className="w-1/2">
           <Image
