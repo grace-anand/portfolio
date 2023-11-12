@@ -6,6 +6,7 @@ import Icons from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <meta name="description" content="Grace Anand's Home Page" />
       </Head>
       <TransitionEffect />
-      <section className="flex flex-col md:flex-row items-center justify-between w-full mb-5">
+      <section className="flex flex-col md:flex-row items-center justify-between w-full mb-5 min-h-[calc(100vh-5rem)]">
         <div className="w-1/2">
           <Image
             src={profilePic}
@@ -52,6 +53,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ContactForm />
       <HireMe className="fixed bottom-4 left-4 hidden md:block" />
     </>
   );

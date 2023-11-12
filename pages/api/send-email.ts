@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from "resend";
-import ContactFormEmail from "@/components/ContactFormEmail";
+import ContactFormEmail from "@/components/ContactFormEmailTemplate";
 import React from "react";
 
 type Data = {
-  data: string;
+  data?: string;
+  error?: string;
 };
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -14,20 +15,26 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const { email, message } = req.body;
+    const { email, message, name } = req.body;
 
     try {
-      if (!email || !message) {
-        res.status(200).json({ data: "Invalid request" });
+      if (!email || !message || !name) {
+        res.status(400).json({ error: "Invalid request" });
+        return;
+      } else if (name.length < 2) {
+        res.status(400).json({ error: "Name too short" });
+        return;
+      } else if (name.length > 50) {
+        res.status(400).json({ error: "Name too long" });
         return;
       } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) === false) {
-        res.status(200).json({ data: "Invalid email" });
+        res.status(400).json({ error: "Invalid email" });
         return;
       } else if (message.length < 10) {
-        res.status(200).json({ data: "Message too short" });
+        res.status(400).json({ error: "Message too short" });
         return;
-      } else if (message.length > 3000) {
-        res.status(200).json({ data: "Message too long" });
+      } else if (message.length > 500) {
+        res.status(400).json({ error: "Message too long" });
         return;
       }
 
@@ -39,6 +46,7 @@ export default async function handler(
         react: React.createElement(ContactFormEmail, {
           message: message,
           senderEmail: email,
+          senderName: name,
         }),
       });
       if (response.error) {
@@ -46,9 +54,11 @@ export default async function handler(
       }
       res.status(200).json({ data: "Email sent" });
     } catch (error: unknown) {
-      res.status(500).json({ data: "Something went wrong. Please try again." });
+      res
+        .status(500)
+        .json({ error: "Something went wrong. Please try again." });
     }
   } else {
-    res.status(200).json({ data: "Invalid request" });
+    res.status(400).json({ error: "Invalid request" });
   }
 }
