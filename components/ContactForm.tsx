@@ -57,7 +57,7 @@ export default function Contact() {
   async function onSubmit(values: z.infer<typeof productSchema>) {
     const { name, email, message } = values;
     try {
-      await fetch("/api/send-email", {
+      await fetch("https://anandr-home.vercel.app/api/send-email", {
         method: "POST",
         body: JSON.stringify({
           name,
