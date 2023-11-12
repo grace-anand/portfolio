@@ -57,7 +57,7 @@ export default function Contact() {
   async function onSubmit(values: z.infer<typeof productSchema>) {
     const { name, email, message } = values;
     try {
-      await fetch("https://anandr-home.vercel.app/api/send-email", {
+      await fetch("/api/send-email", {
         method: "POST",
         body: JSON.stringify({
           name,
@@ -106,7 +106,7 @@ export default function Contact() {
             name="name"
             control={form.control}
             render={({ field }) => (
-              <FormItem className="py-2 md:w-1/2 md:inline-block md:pe-2">
+              <FormItem className="py-2 md:w-1/2 md:inline-block md:pe-2 align-top">
                 <FormLabel htmlFor="name">Name</FormLabel>
                 <FormControl>
                   <Input placeholder="Anand" {...field} />
@@ -119,7 +119,7 @@ export default function Contact() {
             name="email"
             control={form.control}
             render={({ field }) => (
-              <FormItem className="py-2 md:w-1/2 md:inline-block md:ps-2">
+              <FormItem className="py-2 md:w-1/2 md:inline-block md:ps-2 align-top">
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="anand@google.com" {...field} />
