@@ -15,9 +15,9 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const { email, message, name } = req.body;
-
     try {
+      const { email, message, name } = JSON.parse(req.body);
+
       if (!email || !message || !name) {
         res.status(400).json({ error: "Invalid request" });
         return;

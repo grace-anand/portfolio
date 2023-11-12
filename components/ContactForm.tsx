@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import AnimatedHeading from "./AnimatedHeading";
 import Icons from "./Icons";
 import {
   Form,
@@ -14,6 +13,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { Button } from "./ui/button";
+import React from "react";
+import { cn } from "@/lib/utils";
 
 const productSchema = z.object({
   name: z
@@ -38,6 +40,11 @@ const productSchema = z.object({
 });
 
 export default function Contact() {
+  const [notification, setNotification] = React.useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+
   const form = useForm<z.infer<typeof productSchema>>({
     resolver: zodResolver(productSchema),
     defaultValues: {
@@ -48,7 +55,28 @@ export default function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof productSchema>) {
-    console.log("🚀 ~ file: ContactForm.tsx:35 ~ onSubmit ~ values:", values);
+    const { name, email, message } = values;
+    try {
+      await fetch("/api/send-email", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      form.reset();
+      setNotification({
+        type: "success",
+        message: "Your message has been sent successfully!",
+      });
+    } catch (error) {
+      setNotification({
+        type: "error",
+        message: "Something went wrong. Please try again later.",
+      });
+    }
   }
 
   return (
@@ -118,14 +146,31 @@ export default function Contact() {
               </FormItem>
             )}
           />
-          <button
-            className="flex items-center rounded-lg border-2 border-solid bg-primary py-2 px-4 md:py-2.5 lg:px-6 text-lg font-semibold
-            capitalize text-primary-foreground hover:border-primary hover:bg-transparent hover:text-primary
-            md:p-2 md:px-4 md:text-base hover:bg-none dark:hover:bg-none my-2 md:my-4"
+          <div className="text-center">
+            {notification && (
+              <p
+                className={cn(
+                  notification.type === "success"
+                    ? "text-green-500 dark:text-green-400"
+                    : "text-destructive"
+                )}
+              >
+                {notification.message}
+              </p>
+            )}
+          </div>
+
+          <Button
+            disabled={form.formState.isSubmitting}
+            className="group mt-2 md:mt-5"
           >
             Submit
-            <Icons.plane className="inline-block ms-2 w-4" />
-          </button>
+            {form.formState.isSubmitting ? (
+              <div className=" ms-2 h-4 w-4 animate-spin rounded-full border-b-2 border-primary-foreground group-hover:border-primary"></div>
+            ) : (
+              <Icons.plane className="inline-block ms-2 w-4" />
+            )}
+          </Button>
         </form>
       </Form>
     </motion.section>
