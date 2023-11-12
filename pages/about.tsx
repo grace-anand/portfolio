@@ -1,7 +1,7 @@
 import AnimatedHeading from "@/components/AnimatedHeading";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../public/my-pic.png";
+import profilePic from "../public/about-pic.jpg";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
@@ -43,7 +43,7 @@ const About = () => {
           <Image
             src={profilePic}
             alt="Grace Anand"
-            className="rounded-2xl"
+            className="rounded-2xl dark:brightness-75"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
           />

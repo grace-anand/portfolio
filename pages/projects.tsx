@@ -3,7 +3,12 @@ import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
-import profilePic from "../public/my-pic.png";
+import myBlog from "../public/my-blog.png";
+import portfolio from "../public/portfolio.png";
+import netflix from "../public/netflix.png";
+import sRamalingam from "../public/s-ramalingam.png";
+import StupidNodeCli from "../public/stupid-node-cli.png";
+import cmsBlog from "../public/cms-blog.png";
 import Icons from "@/components/Icons";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -34,7 +39,7 @@ const FeaturedProject = ({
         <Image
           src={image}
           alt={title}
-          className="hover:scale-110 transform transition-all duration-300 ease-in-out"
+          className="hover:scale-110 transform transition-all duration-300 ease-in-out rounded-lg mx-auto"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
         />
@@ -100,13 +105,13 @@ const Project = ({
       <div className="absolute top-0 sm:-right-3 -z-10 sm:h-[103%] sm:w-[101%] sm:rounded-[2.5rem] rounded-br-3xl -right-2 h-[102%] w-[100%] rounded-[1.5rem] bg-primary"></div>
       <Link
         target="_blank"
-        className="cursor-pointer overflow-hidden rounded-lg w-full"
+        className="cursor-pointer overflow-hidden rounded-lg"
         href={link}
       >
         <Image
           src={image}
           alt={title}
-          className="hover:scale-110 transform transition-all duration-300 ease-in-out"
+          className="hover:scale-110 transform transition-all duration-300 ease-in-out mx-auto"
         />
       </Link>
       <div className="flex flex-col items-start justify-between w-full pl-0 pt-6">
@@ -164,19 +169,19 @@ const Projects = () => {
           <FeaturedProject {...allProjects[0]} />
         </div>
         <div className="col-span-12 md:col-span-6">
-          <Project {...allProjects[0]} />
+          <Project {...allProjects[2]} />
         </div>
         <div className="col-span-12 md:col-span-6">
-          <Project {...allProjects[0]} />
+          <Project {...allProjects[3]} />
         </div>
         <div className="col-span-12">
-          <FeaturedProject {...allProjects[0]} />
+          <FeaturedProject {...allProjects[1]} />
         </div>
         <div className="col-span-12 md:col-span-6">
-          <Project {...allProjects[0]} />
+          <Project {...allProjects[4]} />
         </div>
         <div className="col-span-12 md:col-span-6">
-          <Project {...allProjects[0]} />
+          <Project {...allProjects[5]} />
         </div>
       </div>
     </>
@@ -192,7 +197,52 @@ const allProjects = [
     summary:
       "A personal blog website built with Astro, Typescript, Tailwind CSS and MDX. It is a static site hosted on Vercel.",
     link: "https://anandr.vercel.app/",
-    image: profilePic,
+    image: myBlog,
     github: "https://github.com/grace-anand/blog",
+  },
+  {
+    type: "Portfolio Website",
+    title: "Portfolio",
+    summary:
+      "A portfolio website built with Next.js, Typescript, Tailwind CSS and Framer motion. It is a static site hosted on Vercel.",
+    link: "https://anandr-home.vercel.app/",
+    image: portfolio,
+    github: "https://github.com/grace-anand/portfolio",
+  },
+  {
+    type: "Clone",
+    title: "Netflix Clone",
+    summary:
+      "A Netflix clone built with React, and TMDB api. It is a static site hosted on Firebase.",
+    link: "https://netflix-clone-5cb6d.web.app/",
+    image: netflix,
+    github: "https://github.com/grace-anand/netflix-clone",
+  },
+  {
+    type: "Landing page",
+    title: "S Ramalingam",
+    summary:
+      "A landing page built with Astro, Typescript and Tailwind CSS. It is a static site hosted on Vercel.",
+    link: "https://sramalingam.vercel.app",
+    image: sRamalingam,
+    github: "https://github.com/grace-anand/sramalingam",
+  },
+  {
+    type: "CLI",
+    title: "Stupid Node CLI",
+    summary:
+      "A Fun CLI built with Node.js, Typescript and Inquirer. It is an npm package. You can try it by running npx stupid_node_cli in your terminal.",
+    link: "https://www.npmjs.com/package/stupid_node_cli",
+    image: StupidNodeCli,
+    github: "https://github.com/grace-anand/stupid_node_cli",
+  },
+  {
+    type: "CMS",
+    title: "BLOG CMS",
+    summary:
+      "A blog CMS built with Next.js, Typescript, Tailwind CSS and Sanity.io. It is a static site hosted on Vercel.",
+    link: "https://anand-cms-blog.vercel.app/",
+    image: cmsBlog,
+    github: "https://github.com/grace-anand/cms-blog",
   },
 ];
