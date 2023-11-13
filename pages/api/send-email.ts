@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Resend } from "resend";
-import ContactFormEmail from "@/components/ContactFormEmailTemplate";
-import React from "react";
+// import { Resend } from "resend";
+// import ContactFormEmail from "@/components/ContactFormEmailTemplate";
+// import React from "react";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -11,7 +11,7 @@ type Data = {
   error?: string;
 };
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(
   req: NextApiRequest,
@@ -20,6 +20,7 @@ export default async function handler(
   if (req.method === "POST") {
     try {
       const { email, message, name } = JSON.parse(req.body);
+      console.log("🚀 ~ file: send-email.ts:23 ~ req.body:", req.body);
 
       if (!email || !message || !name) {
         res.status(400).json({ error: "Invalid request" });
@@ -41,20 +42,20 @@ export default async function handler(
         return;
       }
 
-      const response = await resend.emails.send({
-        from: "Contact Form <onboarding@resend.dev>",
-        to: "graceanand99@gmail.com",
-        subject: "Message from contact form",
-        reply_to: email,
-        react: React.createElement(ContactFormEmail, {
-          message: message,
-          senderEmail: email,
-          senderName: name,
-        }),
-      });
-      if (response.error) {
-        throw new Error();
-      }
+      // const response = await resend.emails.send({
+      //   from: "Contact Form <onboarding@resend.dev>",
+      //   to: "graceanand99@gmail.com",
+      //   subject: "Message from contact form",
+      //   reply_to: email,
+      //   react: React.createElement(ContactFormEmail, {
+      //     message: message,
+      //     senderEmail: email,
+      //     senderName: name,
+      //   }),
+      // });
+      // if (response.error) {
+      //   throw new Error();
+      // }
       res.status(200).json({ data: "Email sent" });
     } catch (error: unknown) {
       res
