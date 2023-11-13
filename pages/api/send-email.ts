@@ -3,9 +3,6 @@ import { Resend } from "resend";
 import ContactFormEmail from "@/components/ContactFormEmailTemplate";
 import React from "react";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
-
 type Data = {
   data?: string;
   error?: string;
