@@ -3,8 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 // import ContactFormEmail from "@/components/ContactFormEmailTemplate";
 // import React from "react";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
+// export const runtime = "edge";
+// export const dynamic = "force-dynamic";
 
 type Data = {
   data?: string;
