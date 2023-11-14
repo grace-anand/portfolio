@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from "resend";
-import ContactFormEmail from "@/components/ContactFormEmailTemplate";
+import ContactFormEmail from "@/email/ContactEmailTemplate";
 import React from "react";
 
 type Data = {
