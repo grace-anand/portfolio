@@ -80,7 +80,7 @@ const Header = () => {
             </MobileNavItem>
             <MobileNavItem
               onClick={onMobileLinkClick}
-              href="https://anandr.vercel.app/"
+              href={process.env.NEXT_PUBLIC_BLOG_URL || "/"}
             >
               Blog
             </MobileNavItem>
@@ -122,7 +122,7 @@ const Header = () => {
           <NavItem href="/">Home</NavItem>
           <NavItem href="/about">About</NavItem>
           <NavItem href="/projects">Projects</NavItem>
-          <NavItem href="https://anandr.vercel.app/">Blog</NavItem>
+          <NavItem href={process.env.NEXT_PUBLIC_BLOG_URL || "/"}>Blog</NavItem>
         </nav>
         <IconLink
           href="/"
