@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from "resend";
-import ContactFormEmail from "@/components/ContactFormEmailTemplate";
-import React from "react";
 
 type Data = {
   data?: string;
@@ -43,11 +41,7 @@ export default async function handler(
         to: "graceanand99@gmail.com",
         subject: "Message from contact form",
         reply_to: email,
-        react: React.createElement(ContactFormEmail, {
-          message: message,
-          senderEmail: email,
-          senderName: name,
-        }),
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       });
       if (response.error) {
         throw new Error();
