@@ -15,7 +15,6 @@ export default async function handler(
   if (req.method === "POST") {
     try {
       const { email, message, name } = JSON.parse(req.body);
-      console.log("🚀 ~ file: send-email.ts:23 ~ req.body:", req.body);
 
       if (!email || !message || !name) {
         res.status(400).json({ error: "Invalid request" });
