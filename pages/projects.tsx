@@ -196,7 +196,7 @@ const allProjects = [
     title: "Personal Blog",
     summary:
       "A personal blog website built with Astro, Typescript, Tailwind CSS and MDX. It is a static site hosted on Vercel.",
-    link: "https://anandr.vercel.app/",
+    link: "https://anandr-blog.vercel.app/",
     image: myBlog,
     github: "https://github.com/grace-anand/blog",
   },

@@ -11,7 +11,7 @@ const Footer = () => {
           ♡
         </span>
         by&nbsp;
-        <Link target="_blank" className="underline underline-offset-2" href="">
+        <Link className="underline underline-offset-2" href="/about">
           Anand
         </Link>
       </div>
