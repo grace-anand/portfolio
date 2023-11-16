@@ -3,8 +3,6 @@ import { Resend } from "resend";
 import React from "react";
 import ContactFormEmail from "@/email/ContactEmailTemplate";
 
-const ReactCreateElement = structuredClone(React.createElement);
-
 type Data = {
   data?: string;
   error?: string;
@@ -45,7 +43,7 @@ export default async function handler(
         to: "graceanand99@gmail.com",
         subject: "Message from contact form",
         reply_to: email,
-        react: ReactCreateElement(ContactFormEmail, {
+        react: React.createElement(ContactFormEmail, {
           senderName: name,
           senderEmail: email,
           message: message,
