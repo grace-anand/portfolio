@@ -5,6 +5,8 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 const montserrat = Montserrat({
   variable: "--font-mont",
@@ -12,6 +14,8 @@ const montserrat = Montserrat({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <ThemeProvider attribute="class">
       <Head>
@@ -39,7 +43,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <main
         className={`${montserrat.variable} font-mont min-h-[calc(100vh-10rem)] grid place-items-center container`}
       >
-        <Component {...pageProps} />
+        <AnimatePresence initial={false} mode="wait">
+          <Component key={router.asPath} {...pageProps} />
+        </AnimatePresence>
       </main>
       <Footer />
     </ThemeProvider>
