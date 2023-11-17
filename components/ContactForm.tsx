@@ -96,9 +96,9 @@ export default function Contact() {
         once: true,
       }}
     >
-      <h4 className="text-4xl my-7 font-semibold text-center md:text-5xl text-primary">
+      <h2 className="text-4xl my-7 font-semibold text-center md:text-5xl text-primary">
         Contact me
-      </h4>
+      </h2>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit) as unknown as undefined}>
