@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="description" content="Grace Anand's Home Page" />
       </Head>
       <TransitionEffect />
-      <section className="flex flex-col md:flex-row items-center justify-between w-full mb-5 min-h-[calc(100vh-5rem)]">
+      <section className="flex flex-col md:flex-row items-center md:justify-between w-full mb-5 min-h-[calc(100vh-5rem)]">
         <div className="w-1/2">
           <Image
             src={profilePic}
@@ -27,7 +27,7 @@ export default function Home() {
           />
         </div>
         <div className="md:w-1/2 md:pl-5 pt-5 w-full">
-          <AnimatedHeading className="xl:text-6xl md:text-left lg:text-5xl sm:text-4xl text-3xl text-center">
+          <AnimatedHeading className="xl:text-6xl md:text-left lg:text-5xl md:text-4xl text-3xl text-center">
             Hello, I&apos;m Anand 👋. A passionate web dev who is keen on
             learning new tech.
           </AnimatedHeading>
