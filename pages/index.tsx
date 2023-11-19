@@ -1,11 +1,9 @@
 import Image from "next/image";
 import profilePic from "../public/profile-pic.png";
-import AnimatedHeading from "@/components/AnimatedHeading";
 import Link from "next/link";
 import Icons from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import Head from "next/head";
-import TransitionEffect from "@/components/TransitionEffect";
 import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
@@ -15,7 +13,6 @@ export default function Home() {
         <title>Home</title>
         <meta name="description" content="Grace Anand's Home Page" />
       </Head>
-      <TransitionEffect />
       <section className="flex flex-col md:flex-row items-center justify-between w-full mb-5 min-h-[calc(100vh-5rem)]">
         <div className="w-1/2">
           <Image
@@ -27,10 +24,10 @@ export default function Home() {
           />
         </div>
         <div className="md:w-1/2 md:pl-5 pt-5 w-full">
-          <AnimatedHeading className="xl:text-6xl md:text-left lg:text-5xl sm:text-4xl text-3xl text-center">
+          <h2 className="xl:text-6xl md:text-left lg:text-5xl sm:text-4xl text-3xl text-center">
             Hello, I&apos;m Anand 👋. A passionate web dev who is keen on
             learning new tech.
-          </AnimatedHeading>
+          </h2>
           <p className="my-4 font-medium md:text-left text-center">
             I am a web developer with a passion for building web applications. I
             enjoy learning new technologies and building projects with them.

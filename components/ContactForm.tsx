@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Icons from "./Icons";
 import {
   Form,
@@ -80,22 +79,7 @@ export default function Contact() {
   }
 
   return (
-    <motion.section
-      id="contact"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)]"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-    >
+    <section id="contact" className="mb-20 sm:mb-28 w-[min(100%,38rem)]">
       <h4 className="text-4xl my-7 font-semibold text-center md:text-5xl text-primary">
         Contact me
       </h4>
@@ -173,6 +157,6 @@ export default function Contact() {
           </Button>
         </form>
       </Form>
-    </motion.section>
+    </section>
   );
 }
