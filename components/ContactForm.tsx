@@ -17,7 +17,7 @@ import { Button } from "./ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 
-const productSchema = z.object({
+const contactFormDetailsSchema = z.object({
   name: z
     .string()
     .min(5, {
@@ -45,8 +45,8 @@ export default function Contact() {
     message: string;
   } | null>(null);
 
-  const form = useForm<z.infer<typeof productSchema>>({
-    resolver: zodResolver(productSchema),
+  const form = useForm<z.infer<typeof contactFormDetailsSchema>>({
+    resolver: zodResolver(contactFormDetailsSchema),
     defaultValues: {
       name: "",
       message: "",
@@ -54,7 +54,7 @@ export default function Contact() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof productSchema>) {
+  async function onSubmit(values: z.infer<typeof contactFormDetailsSchema>) {
     const { name, email, message } = values;
     try {
       await fetch("/api/send-email", {

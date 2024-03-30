@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="px-10 py-8 flex-col flex lg:flex-row justify-between items-center border-t-2 border-solid border-primary">
-      <span>2023 © All Rights Reserved.</span>
+      <span>{new Date().getFullYear()} © All Rights Reserved.</span>
       <div className="flex items-center">
         Built with
         <span className="text-primary text-2xl px-1 dark:text-primaryDark">
