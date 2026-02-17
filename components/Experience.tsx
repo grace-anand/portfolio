@@ -17,7 +17,7 @@ const Details = ({
   link: string;
   period: string;
   address: string;
-  work: string;
+  work: string[];
 }) => {
   const ref = useRef<HTMLLIElement>(null);
 
@@ -41,7 +41,11 @@ const Details = ({
         <span className="capitalize opacity-70 font-medium text-sm sm:text-base">
           {period} | {address}
         </span>
-        <p className="font-medium w-full text-sm md:text-base">{work}</p>
+        <ul className="mt-2 list-disc pl-5 space-y-2 font-medium w-full text-sm md:text-base">
+          {work.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </motion.div>
     </li>
   );
@@ -76,11 +80,29 @@ export default Experience;
 
 const experiences = [
   {
-    position: "Solution architect",
-    company: "Francium tech",
-    link: "/",
-    period: "2021 - Present",
+    position: "Full Stack Developer",
+    company: "Francium Tech",
+    link: "https://francium.tech",
+    period: "Nov 2021 - Oct 2025",
     address: "Padur, Chennai",
-    work: "Worked mostly as Front End Engineer, Gained immense knowledge on working with large scale applications, (Money Smart) Was able to work on multiple Repos, (Libraries, CMS, API, etc) and had opportunity to fix several bugs and develop debugging skills.",
+    work: [
+      "Played a key role in developing and enhancing over 40 large-scale applications using Vue, Nuxt, React, Next.js, and Node.js.",
+      "Improved code quality and maintainability by 25% through rigorous code reviews and software engineering best practices.",
+      "Conducted technical interviews for more than 20 candidates and helped recruit high-caliber talent.",
+      "Mentored over 20 developers, resolved technical blockers, and improved team delivery speed and code quality.",
+    ],
+  },
+  {
+    position: "Experience Engineer",
+    company: "Publicis Sapient",
+    link: "https://www.publicissapient.com",
+    period: "Oct 2025 - Present",
+    address: "Kandanchavadi, Chennai",
+    work: [
+      "Migrated a legacy application to modern Next.js architecture to improve performance, accessibility, and SEO.",
+      "Built and contributed to microfrontend architecture designed to scale for millions of users.",
+      "Developed and maintained automated test suites to proactively detect regressions and improve reliability.",
+      "Delivered reusable white-label architecture that reduced code duplication and accelerated new client onboarding.",
+    ],
   },
 ];

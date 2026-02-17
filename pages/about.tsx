@@ -77,7 +77,7 @@ const highlights = [
     description: "Happy Clients",
   },
   {
-    digit: 2,
+    digit: 4,
     description: "Years of Experience",
   },
 ];
