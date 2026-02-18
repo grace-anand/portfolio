@@ -208,7 +208,7 @@ const allProjects = [
     title: "Portfolio",
     summary:
       "A high-performance portfolio crafted with Next.js, TypeScript, Tailwind CSS, and Framer Motion to showcase product thinking, motion, and engineering quality.",
-    link: "https://anandr-home.vercel.app/",
+    link: "https://anandr.vercel.app/",
     image: portfolio,
     github: "https://github.com/grace-anand/portfolio",
   },
