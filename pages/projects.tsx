@@ -74,10 +74,10 @@ const FeaturedProject = ({
           <Link
             target="_blank"
             className="ml-4 rounded-lg p-2 sm:px-6 sm:text-lg font-semibold px-4 text-base bg-primary text-primary-foreground hover:bg-none dark:hover:bg-none hover:text-primary hover:shadow-lg hover:bg-secondary"
-            aria-label={title + " Visit Project"}
+            aria-label={title + " View Live Project"}
             href={link}
           >
-            Visit Project
+            View Live
           </Link>
         </div>
       </div>
@@ -134,10 +134,10 @@ const Project = ({
           <Link
             target="_blank"
             className="rounded-lg p-2 sm:px-6 sm:text-lg font-semibold px-4 text-base bg-primary text-primary-foreground hover:bg-none dark:hover:bg-none hover:text-primary hover:shadow-lg hover:bg-secondary"
-            aria-label={title + " Visit Project"}
+            aria-label={title + " View Live Project"}
             href={link}
           >
-            Visit
+            View Live
           </Link>
           <motion.a
             target="_blank"
@@ -159,11 +159,14 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Projects</title>
-        <meta name="description" content="Projects by Grace Anand" />
+        <title>Selected Work | Anand R</title>
+        <meta
+          name="description"
+          content="Selected frontend and fullstack projects by Anand R, focused on performance, scalability, and product impact."
+        />
       </Head>
       <TransitionEffect />
-      <AnimatedHeading>Projects</AnimatedHeading>
+      <AnimatedHeading>Selected Work</AnimatedHeading>
       <div className="grid grid-cols-12 xl:gap-24 md:gap-y-32 lg:gap-x-16 sm:gap-x-8 gap-y-8 gap-x-0 mb-10">
         <div className="col-span-12">
           <FeaturedProject {...allProjects[0]} />
@@ -192,55 +195,55 @@ export default Projects;
 
 const allProjects = [
   {
-    type: "Blog Website",
+    type: "Content Platform",
     title: "Personal Blog",
     summary:
-      "A personal blog website built with Astro, Typescript, Tailwind CSS and MDX. It is a static site hosted on Vercel.",
+      "A blazing-fast developer blog built with Astro, TypeScript, Tailwind CSS, and MDX, designed for clean reading, strong SEO, and frictionless publishing.",
     link: "https://anandr-blog.vercel.app/",
     image: myBlog,
     github: "https://github.com/grace-anand/blog",
   },
   {
-    type: "Portfolio Website",
+    type: "Personal Brand Site",
     title: "Portfolio",
     summary:
-      "A portfolio website built with Next.js, Typescript, Tailwind CSS and Framer motion. It is a static site hosted on Vercel.",
+      "A high-performance portfolio crafted with Next.js, TypeScript, Tailwind CSS, and Framer Motion to showcase product thinking, motion, and engineering quality.",
     link: "https://anandr-home.vercel.app/",
     image: portfolio,
     github: "https://github.com/grace-anand/portfolio",
   },
   {
-    type: "Clone",
+    type: "Streaming UI",
     title: "Netflix Clone",
     summary:
-      "A Netflix clone built with React, and TMDB api. It is a static site hosted on Firebase.",
+      "A React-based streaming interface powered by TMDB APIs, focused on reusable UI patterns, smooth navigation, and responsive performance.",
     link: "https://netflix-clone-5cb6d.web.app/",
     image: netflix,
     github: "https://github.com/grace-anand/netflix-clone",
   },
   {
-    type: "Landing page",
+    type: "Marketing Site",
     title: "S Ramalingam",
     summary:
-      "A landing page built with Astro, Typescript and Tailwind CSS. It is a static site hosted on Vercel.",
+      "A conversion-focused landing page built with Astro, TypeScript, and Tailwind CSS, optimized for speed, readability, and brand clarity.",
     link: "https://sramalingam.vercel.app",
     image: sRamalingam,
     github: "https://github.com/grace-anand/sramalingam",
   },
   {
-    type: "CLI",
+    type: "Developer Tooling",
     title: "Stupid Node CLI",
     summary:
-      "A Fun CLI built with Node.js, Typescript and Inquirer. It is an npm package. You can try it by running npx stupid_node_cli in your terminal.",
+      "A playful npm CLI package built with Node.js, TypeScript, and Inquirer that demonstrates command design, package publishing, and DX-first thinking.",
     link: "https://www.npmjs.com/package/stupid_node_cli",
     image: StupidNodeCli,
     github: "https://github.com/grace-anand/stupid_node_cli",
   },
   {
-    type: "CMS",
-    title: "BLOG CMS",
+    type: "Headless CMS",
+    title: "Blog CMS",
     summary:
-      "A blog CMS built with Next.js, Typescript, Tailwind CSS and Sanity.io. It is a static site hosted on Vercel.",
+      "A production-ready blog CMS built with Next.js, TypeScript, Tailwind CSS, and Sanity, enabling flexible content workflows and scalable publishing.",
     link: "https://anand-cms-blog.vercel.app/",
     image: cmsBlog,
     github: "https://github.com/grace-anand/cms-blog",

@@ -60,7 +60,7 @@ const Experience = () => {
 
   return (
     <>
-      <AnimatedHeading className="pt-10">Experience</AnimatedHeading>
+      <AnimatedHeading className="pt-10">Professional Experience</AnimatedHeading>
       <div className="w-full md:w-[90%] lg:w-3/4 mx-auto relative" ref={ref}>
         <motion.div
           style={{ scaleY: scrollYProgress }}
@@ -86,10 +86,10 @@ const experiences = [
     period: "Nov 2021 - Oct 2025",
     address: "Padur, Chennai",
     work: [
-      "Played a key role in developing and enhancing over 40 large-scale applications using Vue, Nuxt, React, Next.js, and Node.js.",
-      "Improved code quality and maintainability by 25% through rigorous code reviews and software engineering best practices.",
-      "Conducted technical interviews for more than 20 candidates and helped recruit high-caliber talent.",
-      "Mentored over 20 developers, resolved technical blockers, and improved team delivery speed and code quality.",
+      "Delivered and enhanced 40+ large-scale applications using Vue, Nuxt, React, Next.js, and Node.js across multiple business domains.",
+      "Improved maintainability by 25% through PR standards, cleaner architecture, and consistent engineering practices.",
+      "Interviewed 20+ candidates and partnered with leadership to hire high-performing engineers.",
+      "Mentored 20+ developers on debugging, code quality, and delivery discipline to improve team output.",
     ],
   },
   {
@@ -99,10 +99,10 @@ const experiences = [
     period: "Oct 2025 - Present",
     address: "Kandanchavadi, Chennai",
     work: [
-      "Migrated a legacy application to modern Next.js architecture to improve performance, accessibility, and SEO.",
-      "Built and contributed to microfrontend architecture designed to scale for millions of users.",
-      "Developed and maintained automated test suites to proactively detect regressions and improve reliability.",
-      "Delivered reusable white-label architecture that reduced code duplication and accelerated new client onboarding.",
+      "Led migration of a legacy product to modern Next.js architecture, improving SEO, accessibility, and runtime performance.",
+      "Built microfrontend modules for high-traffic customer journeys designed to scale for millions of users.",
+      "Expanded automated test coverage to catch regressions early and increase release confidence.",
+      "Delivered reusable white-label architecture that reduced duplicate code and accelerated new-client onboarding.",
     ],
   },
 ];

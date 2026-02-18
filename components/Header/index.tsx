@@ -76,13 +76,13 @@ const Header = () => {
               About
             </MobileNavItem>
             <MobileNavItem onClick={onMobileLinkClick} href="/projects">
-              Projects
+              Work
             </MobileNavItem>
             <MobileNavItem
               onClick={onMobileLinkClick}
               href={process.env.NEXT_PUBLIC_BLOG_URL || "/"}
             >
-              Blog
+              Articles
             </MobileNavItem>
           </nav>
           <nav className="flex gap-5">
@@ -121,8 +121,10 @@ const Header = () => {
         <nav className="flex gap-5">
           <NavItem href="/">Home</NavItem>
           <NavItem href="/about">About</NavItem>
-          <NavItem href="/projects">Projects</NavItem>
-          <NavItem href={process.env.NEXT_PUBLIC_BLOG_URL || "/"}>Blog</NavItem>
+          <NavItem href="/projects">Work</NavItem>
+          <NavItem href={process.env.NEXT_PUBLIC_BLOG_URL || "/"}>
+            Articles
+          </NavItem>
         </nav>
         <IconLink
           href="/"
@@ -182,7 +184,7 @@ const IconLink = (
       className="hover:bg-none dark:hover:bg-none"
       whileHover={{ y: -2 }}
       whileTap={{ y: -2 }}
-      aria-label={"Visit my" + props.type}
+      aria-label={"Visit my " + props.type}
     >
       {props.children}
     </motion.a>

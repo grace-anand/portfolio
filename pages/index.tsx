@@ -12,15 +12,18 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <meta name="description" content="Grace Anand's Home Page" />
+        <title>Anand R | Frontend Engineer</title>
+        <meta
+          name="description"
+          content="Senior fullstack developer focused on building high-performance React and Next.js products."
+        />
       </Head>
       <TransitionEffect />
       <section className="flex flex-col md:flex-row items-center md:justify-between w-full mb-5 min-h-[calc(100vh-5rem)]">
         <div className="w-1/2">
           <Image
             src={profilePic}
-            alt="grace-anand"
+            alt="Anand R portrait"
             className="mx-auto dark:brightness-75"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
@@ -28,12 +31,12 @@ export default function Home() {
         </div>
         <div className="md:w-1/2 md:pl-5 pt-5 w-full">
           <AnimatedHeading className="xl:text-6xl md:text-left lg:text-5xl md:text-4xl text-3xl text-center">
-            Hello, I&apos;m Anand 👋. A passionate web dev who is keen on
-            learning new tech.
+            Senior Frontend Engineer building fast, scalable web products.
           </AnimatedHeading>
           <p className="my-4 font-medium md:text-left text-center">
-            I am a web developer with a passion for building web applications. I
-            enjoy learning new technologies and building projects with them.
+            I help teams ship production-grade experiences with React, Next.js,
+            TypeScript, and Node.js. From architecture to polished UI, I focus
+            on performance, accessibility, and clean code that scales.
           </p>
           <div className="flex items-center justify-center md:justify-normal md:self-start mt-2">
             <Link
@@ -44,11 +47,11 @@ export default function Home() {
               target="_blank"
               download
             >
-              Resume
+              Download Resume
               <Icons.externalLink className="inline-block ms-1" width={20} />
             </Link>
             <Link href="/#contact" className="ms-5 underline">
-              Contact
+              Let&apos;s Talk
             </Link>
           </div>
         </div>

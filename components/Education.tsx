@@ -79,18 +79,18 @@ export default Education;
 
 const allEducation = [
   {
-    type: "Bachelor of Science",
+    type: "B.Sc. Electronics and Communication Science",
     period: "2018 - 2021",
     place: "Sholinganallur, Chennai",
-    info: "Graduated in B.sc. Electronics and commmunication with 7.7 CGPA. ",
-    institution: "MSCAS",
+    info: "Mohamed Sathak College of Arts & Science | GPA: 7.7/10.",
+    institution: "Mohamed Sathak College of Arts & Science",
     link: "https://www.mscartsandscience-edu.in/",
   },
   {
     type: "Higher Secondary",
     period: "2016 - 2018",
     place: "Velachery, Chennai",
-    info: "Completed Higher Secondary with a total percentage of 65%.",
+    info: "Completed higher secondary education with strong fundamentals in science and mathematics.",
     institution: "St. Britto's Matriculation Higher Secondary School",
     link: "https://stbrittosmhss.edu.in/",
   },
@@ -98,7 +98,7 @@ const allEducation = [
     type: "High School",
     period: "2015 - 2016",
     place: "Velachery, Chennai",
-    info: "Completed High School with a total percentage of 86%.",
+    info: "Built a strong academic foundation and early interest in technology and problem solving.",
     institution: "St. Britto's Matriculation Higher Secondary School",
     link: "https://stbrittosmhss.edu.in/",
   },

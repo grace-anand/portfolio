@@ -11,7 +11,7 @@ const HireMe = (props: React.ComponentProps<"div">) => {
           href="mailto:graceanand99@gmail.com"
           className="absolute bg-primary text-primary-foreground rounded-full w-20 h-20 flex items-center justify-center ring-2 font-semibold"
         >
-          Mail Me
+          Hire Me
         </Link>
       </div>
     </div>

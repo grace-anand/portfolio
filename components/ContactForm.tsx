@@ -21,21 +21,21 @@ const contactFormDetailsSchema = z.object({
   name: z
     .string()
     .min(5, {
-      message: "Name must be at least 5 characters long",
+      message: "Please enter your full name (minimum 5 characters).",
     })
     .max(50, {
-      message: "Name must be at most 50 characters long",
+      message: "Name must be 50 characters or fewer.",
     }),
   message: z
     .string()
     .min(10, {
-      message: "Message must be at least 10 characters long",
+      message: "Please share at least 10 characters about your project.",
     })
     .max(500, {
-      message: "Message must be at most 500 characters long",
+      message: "Message must be 500 characters or fewer.",
     }),
   email: z.string().email({
-    message: "Please enter a valid email",
+    message: "Please enter a valid work email.",
   }),
 });
 
@@ -69,12 +69,12 @@ export default function Contact() {
       form.reset();
       setNotification({
         type: "success",
-        message: "Your message has been sent successfully!",
+        message: "Thanks for reaching out. I will get back to you shortly.",
       });
     } catch (error) {
       setNotification({
         type: "error",
-        message: "Something went wrong. Please try again later.",
+        message: "Could not send your message right now. Please try again.",
       });
     }
   }
@@ -97,7 +97,7 @@ export default function Contact() {
       }}
     >
       <h2 className="text-4xl my-7 font-semibold text-center md:text-5xl text-primary">
-        Contact me
+        Let&apos;s Build Something Great
       </h2>
 
       <Form {...form}>
@@ -107,9 +107,9 @@ export default function Contact() {
             control={form.control}
             render={({ field }) => (
               <FormItem className="py-2 md:w-1/2 md:inline-block md:pe-2 align-top">
-                <FormLabel htmlFor="name">Name</FormLabel>
+                <FormLabel htmlFor="name">Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Anand" {...field} />
+                  <Input placeholder="Your full name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -122,7 +122,7 @@ export default function Contact() {
               <FormItem className="py-2 md:w-1/2 md:inline-block md:ps-2 align-top">
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="anand@google.com" {...field} />
+                  <Input placeholder="you@company.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -133,10 +133,10 @@ export default function Contact() {
             control={form.control}
             render={({ field }) => (
               <FormItem className="py-2">
-                <FormLabel htmlFor="message">Message</FormLabel>
+                <FormLabel htmlFor="message">Project Brief</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Hello, I would like to hire you for my project..."
+                    placeholder="Tell me about your goals, timeline, and what success looks like."
                     {...field}
                     value={field.value ?? ""}
                     rows={6}
@@ -164,7 +164,7 @@ export default function Contact() {
             disabled={form.formState.isSubmitting}
             className="group mt-2 md:mt-5"
           >
-            Submit
+            Send Message
             {form.formState.isSubmitting ? (
               <div className=" ms-2 h-4 w-4 animate-spin rounded-full border-b-2 border-primary-foreground group-hover:border-primary"></div>
             ) : (
